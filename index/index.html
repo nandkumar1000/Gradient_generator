@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/7306/7306277.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="nav">
+        <div class="navbar"><p style="margin: 3px;"><i class="fa-sharp fa-solid fa-house"></i></p>Home</div>
+        <div class="navbar">Canvas</div>
+        <div class="navbar">About</div>
+        <div class="navbar"><p style="margin: 3px;"><i class="fa-regular fa-user"></i></p>  Log in</div>
+    </div>
+    <div class="hero">
+        <div class="herocontent"></div>
+    </div>
+    <section >
+        <div class="nand">
+            <button id="linearButton"  >#051937</button>
+            <button id="radialButton" >#008793</button>
+        </div>
+        <h2>Copy your code here</h2>
+        <div class="copycode">background-image: radial-gradient(circle, rgb(92, 145, 229), rgb(152, 63, 198));</div>
+    </section>
+    <div class="content">
+        <div class="content1">Create captivating visuals effortlessly with our gradient generator. <br>Explore endless color combinations and elevate your designs with ease.<br> Start generating stunning gradients today!</div>
+    </div>
+    <div class="infor">
+        <div class="linked"><p><i class="fa-brands fa-linkedin"></i></p><a href="https://www.linkedin.com/in/nandkumarsahu1234/" target="_blank">Visit my Linked in</a></div>
+        <div class="linked"><p><i class="fa-brands fa-github"></i></p><a href="https://github.com/nandkumar1000" target="_blank">Visit my GitHub</a></div>
+        <div class="linked"><p><i class="fa-solid fa-envelope"></i></p><a href="https://mail.google.com" target="_blank">Mail me<br><h4>shivanandbansal9520@gmail.com</h4></a></div>
+    </div>
+    <div class="footer">
+        <div class="panel1">Terms of Use:
+            By accessing our gradient generator, you agree to its terms of use.<br> Use the generated gradients responsibly and note that accuracy may vary.
+            </div>
+    </div>
+    <script>
+        alert('Left-Button: Linear-Gradient ')
+        alert('Right-Button: Radial-Gradient')
+        let linearBtn = document.getElementById("linearButton");
+        let radialBtn = document.getElementById("radialButton");
+        let copyDiv = document.querySelector(".copycode");
+        let rgb1;
+        let rgb2;
+
+        const hexValues = () => {
+            let HexValues = "0123456789abcdef";
+            let colors = "#";
+            for (let i = 0; i < 6; i++) {
+                colors += HexValues[Math.floor(Math.random() * 16)];
+            }
+            return colors;
+        };
+
+        const generateLinearGradient = () => {
+             rgb1 = hexValues();
+             linearBtn.innerText=rgb1;
+             rgb2 = hexValues(); 
+            console.log(rgb1);
+            document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1},${rgb2})`;
+            copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2});`;
+        };
+
+        const generateRadialGradient = () => {
+             rgb2 = hexValues();
+             radialBtn.innerText=rgb2;
+             rgb1 = hexValues(); 
+            console.log(rgb2);
+            document.body.style.backgroundImage = `radial-gradient(circle, ${rgb1}, ${rgb2} )`;
+            copyDiv.innerHTML = `background-image: radial-gradient(circle, ${rgb1}, ${rgb2} )`;
+        };
+
+        linearBtn.addEventListener("click", generateLinearGradient);
+        radialBtn.addEventListener("click", generateRadialGradient);
+
+        copyDiv.addEventListener("click", () =>{
+            navigator.clipboard.writeText(copyDiv.innerText)
+                .then(() => {
+                    alert("Code copied to clipboard!");
+                })
+                .catch((error) => {
+                    console.error("Failed to copy: ", error);
+                    alert("Failed to copy code to clipboard. Please try again.");
+                });
+        });
+    </script>
+</body>
+</html>
