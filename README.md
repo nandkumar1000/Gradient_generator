@@ -19,9 +19,9 @@ By combining simplicity with versatility, the Gradient Generator empowers design
 
 ## Feature.
 The main features of this gradient generator include:
-- Ability to create linear gradients with the left button
-- Ability to create radial gradients with the right button
-- Color picker for selecting gradient colors
+- Ability to create linear gradients with the left button.
+- Ability to create radial gradients with the right button.
+- Color picker for selecting gradient colors.
 
 ## Details of Use Cases.
 1. **Linear Gradients:**
@@ -37,7 +37,7 @@ The main features of this gradient generator include:
    - The color picker supports RGB, HEX, and HSL color formats.
 
 ## Conclusion: The Dawn of a New Era in Web Design.
-In conclusion, the Gradient Generator represents a valuable asset for designers and developers seeking to elevate the visual appeal of their web projects. Its intuitive interface and powerful features make it an indispensable tool in the arsenal of modern web creators.
+*In conclusion, the Gradient Generator represents a valuable asset for designers and developers seeking to elevate the visual appeal of their web projects. Its intuitive interface and powerful features make it an indispensable tool in the arsenal of modern web creators.
 
 One of the key strengths of the Gradient Generator lies in its ability to simplify the process of gradient creation without sacrificing flexibility or quality. By offering predefined options for linear and radial gradients, the application caters to both novice users who may be unfamiliar with gradient terminology and experienced designers looking for a quick and efficient way to generate gradients.
 
